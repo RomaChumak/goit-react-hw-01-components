@@ -1,6 +1,6 @@
 import transactionHistory from '../transactions.json'
 export const TransactionHistory = () => {
-return (<table class="transaction-history"> 
+return (<table> 
  <thead>
     <tr>
       <th>Type</th>
