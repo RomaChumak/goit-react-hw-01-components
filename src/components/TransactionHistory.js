@@ -1,7 +1,7 @@
 import transactionHistory from '../transactions.json'
 export const TransactionHistory = () => {
-<table class="transaction-history">
-  <thead>
+return (<table class="transaction-history"> 
+ <thead>
     <tr>
       <th>Type</th>
       <th>Amount</th>
@@ -11,11 +11,11 @@ export const TransactionHistory = () => {
 
     <tbody>{
         transactionHistory.map(item => {
-        <tr key={item.id}>
+       return <tr key={item.id}>
       <td>{item.type}</td>
       <td>{item.amount}</td>
       <td>{item.currency}</td>
     </tr>
   })}</tbody>
-</table>
+</table>)
 }
