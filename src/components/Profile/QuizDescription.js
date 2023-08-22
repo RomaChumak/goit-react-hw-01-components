@@ -8,11 +8,10 @@ export const QuizDescription = ({ username, tag, location, avatar }) => {
     <AvatarProf
       src={avatar}
       alt="User avatar"
-      key={1}
     />,
-    <UserName key={2}>{username}</UserName>,
-    <TextDesc key={3}>@{tag}</TextDesc>,
-    <TextDesc key={4}>{location}</TextDesc>]}
+    <UserName>{username}</UserName>,
+    <TextDesc>@{tag}</TextDesc>,
+    <TextDesc>{location}</TextDesc>]}
   </DescConteiners>
 
 }

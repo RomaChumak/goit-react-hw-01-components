@@ -1,9 +1,9 @@
 import { QuizStatList } from './QuizStatList'
 import { StatTitle } from './Statistucs.styled'
 import { Section } from './Statistucs.styled'
-export const Statistics = ({data}) => {
+export const Statistics = ({stats, title}) => {
  return (  <Section>
-    <StatTitle>Upload stats</StatTitle>
-        <QuizStatList data={data} />
+    {title ? <StatTitle>{title}</StatTitle> : ''}
+        <QuizStatList stats={stats} />
     </Section>)
 }
