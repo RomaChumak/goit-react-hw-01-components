@@ -3,6 +3,7 @@ import { TransTh } from "./TransactionHistory.styled"
 import { TransTable } from "./TransactionHistory.styled"
 import { TransBodyTr } from "./TransactionHistory.styled"
 import { TransTd } from "./TransactionHistory.styled"
+import PropTypes from 'prop-types'
 
 export const TransactionHistory = ({ transactionHistory }) => {
 return (<TransTable> 
@@ -24,3 +25,15 @@ return (<TransTable>
   })}</tbody>
 </TransTable>)
 }
+
+
+TransactionHistory.propTypes = {
+  transactionHistory: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      type: PropTypes.string.isRequired,
+      amount: PropTypes.string.isRequired,
+      currency: PropTypes.string.isRequired,
+    })
+  ).isRequired,
+};
